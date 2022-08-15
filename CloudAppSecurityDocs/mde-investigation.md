@@ -70,13 +70,13 @@ Use the following steps to gain more granular visibility on app-related network 
 
     ```kusto
     DeviceNetworkEvents
-    | where RemoteUrl in ("<DOMAIN_LIST>")
+    | where RemoteUrl has_any ("<DOMAIN_LIST>")
     | order by Timestamp desc
     ```
 
 1. Run the query and investigate network events for this app.
 
-![Screenshot showing Microsoft 365 Defender advanced hunting](media/mde-advanced-hunting.png)
+![image](https://user-images.githubusercontent.com/105425841/184648576-469404d4-7941-4f1d-b7bb-c327cd9b3daf.png)
 
 ## Investigate unsanctioned apps in Microsoft 365 Defender
 
